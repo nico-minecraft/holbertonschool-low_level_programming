@@ -1,0 +1,24 @@
+#!/bin/bash
+
+read -p "Filename: " filename
+
+echo "#!/bin/bash" > "$filename"
+
+echo "Enter the script content."
+echo "Press Ctrl+D when finished."
+
+cat >> "$filename"
+
+chmod +x "$filename"
+
+echo "Created executable script: $filename"
+
+lines=$(wc -l < "$filename")
+
+if [ "$lines" -gt 0 ] && [ -z "$(tail -c 1 "$filename")" ]; then
+    echo "File ends with newline"
+else
+    echo "File does NOT end with newline"
+fi
+
+echo "Line count: $lines"
