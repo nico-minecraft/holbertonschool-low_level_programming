@@ -1,19 +1,16 @@
 #include "main.h"
 /**
- * main - Prints the whole alphabet except for q and e
+ * main - Prints the whole alphabet
  * Return: should always be 0
  */
-int main(void)
+int print_alphabet(void)
 {
 	char a = 'a';
 
-	a--;
-	while (a < 'z')
+	while (a <= 'z')
 	{
-		a++;
-		if (a == 'e' || a == 'q')
-			continue;
 		_putchar(a);
+		a++;
 	}
 	_putchar('\n');
 	return (0);
