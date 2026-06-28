@@ -1,6 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
 /**
  * main - Prints the whole alphabet except for q and e
  * Return: should always be 0

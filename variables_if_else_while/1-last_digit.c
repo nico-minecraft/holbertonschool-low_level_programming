@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 /**
- * main - Determines whether the random number is positive, negative or zero
+ * main - Determines if the random number is lesser or greater than 0
  * Return: should always be 0
  */
 int main(void)

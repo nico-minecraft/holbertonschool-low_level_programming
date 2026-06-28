@@ -1,16 +1,16 @@
 #include <stdio.h>
 /**
- * main - Prints the whole alphabet
+ * main - Prints all base 16 numbers
  * Return: should always be 0
  */
 int main(void)
 {
-	char a = 'a';
+	int n = 48;
 
-	while (a <= 'z')
+	while (n <= 59)
 	{
-		putchar(a);
-		a++;
+		putchar(n);
+		n++;
 	}
 	putchar('\n');
 	return (0);
