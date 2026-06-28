@@ -1,13 +1,15 @@
 #include "main.h"
 /**
- * print_alphabet - Prints the whole alphabet
- * Return: should always be 0
+ * _islower - Determines if the character is lower case or not
+ * Return: 1 if it is lowercase, 0 if it is not
+ * @c: is an int variable for the letter to be checked
  */
 int _islower(int c)
 {
-	if (c >= 'a' && c <= 'z') {
+	if (c >= 'a' && c <= 'z')
+	{
 		return (1);
 	}
 
-	return 0;
+	return (0);
 }
