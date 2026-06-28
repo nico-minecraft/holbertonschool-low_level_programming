@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <time.h>
 /**
- * main - Prints all single digit numbers as strings
+ * main - Prints all single digit numbers as strings, separated by commas
  * Return: should always be 0
  */
 
