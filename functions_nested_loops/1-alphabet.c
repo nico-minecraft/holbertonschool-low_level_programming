@@ -1,9 +1,9 @@
 #include "main.h"
 /**
- * main - Prints the whole alphabet
+ * Prints the whole alphabet
  * Return: should always be 0
  */
-int print_alphabet(void)
+void print_alphabet(void)
 {
 	char a = 'a';
 
@@ -13,5 +13,4 @@ int print_alphabet(void)
 		a++;
 	}
 	_putchar('\n');
-	return (0);
 }
