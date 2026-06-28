@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - This prints the desired text using printf
+ * main - Prints the desired text using printf
  * Return: should always be 0
  */
 int main(void)
