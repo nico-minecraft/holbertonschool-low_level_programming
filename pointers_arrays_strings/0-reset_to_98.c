@@ -1,8 +1,7 @@
 #include <stdio.h>
 #include "main.h"
 /**
- * print_numbers - Prints all single digit numbers as strings
- * Return: should always be 0
+ * reset_to_98 - Resets *n to 98
  */
 void reset_to_98(int *n)
 {
