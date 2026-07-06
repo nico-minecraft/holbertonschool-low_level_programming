@@ -2,17 +2,18 @@
 #include <stdio.h>
 
 /**
- * print_diagsums - prints the sum of the two diagonals of a square
- * matrix of integers
- * @a: pointer to the first element of the matrix (flattened)
- * @size: the size of the matrix (size x size)
- *
- * Return: nothing
- */
+* print_diagsums - prints the sum of the two diagonals of a square
+* matrix of integers
+* @a: pointer to the first element of the matrix (flattened)
+* @size: number of rows/columns of the square matrix
+*
+* Return: nothing
+*/
 void print_diagsums(int *a, int size)
 {
 int i;
-int sum1, sum2;
+int sum1;
+int sum2;
 
 sum1 = 0;
 sum2 = 0;
@@ -23,5 +24,5 @@ sum1 += a[i * size + i];
 sum2 += a[i * size + (size - 1 - i)];
 }
 
-printf("First diagonal: %d, Second diagonal: %d\n", sum1, sum2);
+printf("First: %d, Second: %d\n", sum1, sum2);
 }
