@@ -14,6 +14,7 @@ int main(void)
         switch (n) {
 
         case 1:
+        {
             int a, b, c;
             printf("A: ");
             scanf("%d", &a);
@@ -22,6 +23,7 @@ int main(void)
             c = a + b;
             printf("A + B: %d\n\n", c);
             break;
+        }
             
         case 2:
             printf("\nSubtract\n");
