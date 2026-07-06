@@ -1,33 +1,40 @@
 #include <stdio.h>
-/**
- * print_alphabet - Prints the whole alphabet
- * Return: should always be 0
- */
 int main(void)
 {
+
     int n;
-    printf("Simple Calculator\n1) Add\n2) Subtract\n3) Multiply\n4) Divide\n0) Quit\n");
-    scanf("%d", &n); 
-    switch (n) {
+    n = 1; /* prime the loop so it runs at least once */
 
-    case 1:
-        printf("Adding uhh");
-        break;
-    case 2:
-        printf("Subtract");
-        break;
-    case 3:
-        printf("Multiply");
-        break;
-    case 4:
-        printf("Divide");
-        break;
-    case 0:
-        printf("Quit");
-        break;    
-}
+    while (n != 0)
+    {
 
+        int n;
+        printf("Simple Calculator\n1) Add\n2) Subtract\n3) Multiply\n4) Divide\n0) Quit\n");
+        scanf("%d", &n); 
+        switch (n) {
 
+        case 1:
+            printf("\nAdding uhh\n");
+            break;
+            
+        case 2:
+            printf("\nSubtract\n");
+            break;
+        case 3:
+            printf("\nMultiply\n");
+            break;
+        case 4:
+            printf("\nDivide\n");
+            break;
+        case 0:
+            printf("\nBye!\n");
+            return (0);
+        default:
+            printf("\nerror\n");
+            break;
+        }
+
+    }
 
     return 0;
 }
