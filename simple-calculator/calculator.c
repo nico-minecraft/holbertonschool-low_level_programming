@@ -52,15 +52,17 @@ int main(void)
             break;
         }
         case 4:
+        {
             int a, b, c;
             printf("Divide\n");
             printf("A: ");
             scanf("%d", &a);
             printf("B: ");
             scanf("%d", &b);
-            c = a 7 b;
+            c = a / b;
             printf("A / B: %d\n\n", c);
             break;
+        }
         case 0:
             printf("\nBye!\n");
             return (0);
