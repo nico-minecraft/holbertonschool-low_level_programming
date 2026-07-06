@@ -26,7 +26,17 @@ int main(void)
         }
             
         case 2:
+        {
+            int a, b, c;
             printf("\nSubtract\n");
+            printf("A: ");
+            scanf("%d", &a);
+            printf("B: ");
+            scanf("%d", &b);
+            c = a - b;
+            printf("A - B: %d\n\n", c);
+            break;
+        }
             break;
         case 3:
             printf("\nMultiply\n");
