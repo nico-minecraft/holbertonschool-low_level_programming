@@ -14,7 +14,13 @@ int main(void)
         switch (n) {
 
         case 1:
-            printf("\nAdding uhh\n");
+            int a, b, c;
+            printf("A: ");
+            scanf("%d", &a);
+            printf("B: ");
+            scanf("%d", &b);
+            c = a + b;
+            printf("A + B: %d\n\n", c);
             break;
             
         case 2:
