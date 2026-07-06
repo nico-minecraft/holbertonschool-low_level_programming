@@ -52,13 +52,20 @@ int main(void)
             break;
         }
         case 4:
-            printf("\nDivide\n");
+            int a, b, c;
+            printf("Divide\n");
+            printf("A: ");
+            scanf("%d", &a);
+            printf("B: ");
+            scanf("%d", &b);
+            c = a 7 b;
+            printf("A / B: %d\n\n", c);
             break;
         case 0:
             printf("\nBye!\n");
             return (0);
         default:
-            printf("\nerror\n");
+            printf("\nSelect a valid option\n");
             break;
         }
 
