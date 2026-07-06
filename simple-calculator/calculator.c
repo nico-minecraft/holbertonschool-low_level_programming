@@ -16,6 +16,7 @@ int main(void)
         case 1:
         {
             int a, b, c;
+            printf("\nAdd\n");
             printf("A: ");
             scanf("%d", &a);
             printf("B: ");
@@ -39,8 +40,17 @@ int main(void)
         }
             break;
         case 3:
-            printf("\nMultiply\n");
+        {
+            int a, b, c;
+            printf("Multiply\n");
+            printf("A: ");
+            scanf("%d", &a);
+            printf("B: ");
+            scanf("%d", &b);
+            c = a * b;
+            printf("A * B: %d\n\n", c);
             break;
+        }
         case 4:
             printf("\nDivide\n");
             break;
