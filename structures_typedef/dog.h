@@ -1,6 +1,5 @@
 #ifndef MAIN_H
 #define MAIN_H
-
 /**
  * struct dog - Dog structure
  * @name: Dog name
