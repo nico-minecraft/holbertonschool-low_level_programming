@@ -1,5 +1,6 @@
+#include "dog.h"
 /**
- * init_dog - Initialize the dog
+ * init_dog - Initialized the dog
  * @d: dog
  * @name: Dog name
  * @age: Dog age
