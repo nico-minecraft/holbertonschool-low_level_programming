@@ -1,5 +1,12 @@
 #include <stdlib.h>
 
+/**
+ * *create_array - Initializes an empty array
+ * Return: Returns an initialized array
+ * @size: size of the array
+ * @c: Character to fill the array with
+ */
+
 char *create_array(unsigned int size, char c)
 {
 	char *array;
