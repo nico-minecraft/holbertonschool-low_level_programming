@@ -1,6 +1,32 @@
 #include "dog.h"
 #include <stdlib.h>
-#include <string.h>
+
+/**
+ * dup_str - Duplicates a string into newly allocated memory
+ * @str: the string to duplicate
+ *
+ * Return: pointer to the newly allocated copy, or NULL on failure
+ */
+char *dup_str(char *str)
+{
+	char *copy;
+	int len;
+	int i;
+
+	len = 0;
+	while (str[len] != '\0')
+		len++;
+
+	copy = malloc(sizeof(char) * (len + 1));
+	if (copy == NULL)
+		return (NULL);
+
+	for (i = 0; i < len; i++)
+		copy[i] = str[i];
+	copy[len] = '\0';
+
+	return (copy);
+}
 
 /**
  * new_dog - Creates a new dog
@@ -13,33 +39,27 @@
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *d;
-	char *name_copy;
-	char *owner_copy;
 
 	d = malloc(sizeof(dog_t));
 	if (d == NULL)
 		return (NULL);
 
-	name_copy = malloc(sizeof(char) * (strlen(name) + 1));
-	if (name_copy == NULL)
+	d->name = dup_str(name);
+	if (d->name == NULL)
 	{
 		free(d);
 		return (NULL);
 	}
-	strcpy(name_copy, name);
 
-	owner_copy = malloc(sizeof(char) * (strlen(owner) + 1));
-	if (owner_copy == NULL)
+	d->owner = dup_str(owner);
+	if (d->owner == NULL)
 	{
-		free(name_copy);
+		free(d->name);
 		free(d);
 		return (NULL);
 	}
-	strcpy(owner_copy, owner);
 
-	d->name = name_copy;
 	d->age = age;
-	d->owner = owner_copy;
 
 	return (d);
 }
