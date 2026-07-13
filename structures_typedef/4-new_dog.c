@@ -2,33 +2,6 @@
 #include <stdlib.h>
 
 /**
- * dup_str - Duplicates a string into newly allocated memory
- * @str: the string to duplicate
- *
- * Return: pointer to the newly allocated copy, or NULL on failure
- */
-char *dup_str(char *str)
-{
-	char *copy;
-	int len;
-	int i;
-
-	len = 0;
-	while (str[len] != '\0')
-		len++;
-
-	copy = malloc(sizeof(char) * (len + 1));
-	if (copy == NULL)
-		return (NULL);
-
-	for (i = 0; i < len; i++)
-		copy[i] = str[i];
-	copy[len] = '\0';
-
-	return (copy);
-}
-
-/**
  * new_dog - Creates a new dog
  * @name: name of the dog
  * @age: age of the dog
@@ -39,27 +12,43 @@ char *dup_str(char *str)
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *d;
+	char *name_copy;
+	char *owner_copy;
+	int len;
+	int i;
 
 	d = malloc(sizeof(dog_t));
 	if (d == NULL)
 		return (NULL);
 
-	d->name = dup_str(name);
-	if (d->name == NULL)
+	len = 0;
+	while (name[len] != '\0')
+		len++;
+	name_copy = malloc(sizeof(char) * (len + 1));
+	if (name_copy == NULL)
 	{
 		free(d);
 		return (NULL);
 	}
+	for (i = 0; i <= len; i++)
+		name_copy[i] = name[i];
 
-	d->owner = dup_str(owner);
-	if (d->owner == NULL)
+	len = 0;
+	while (owner[len] != '\0')
+		len++;
+	owner_copy = malloc(sizeof(char) * (len + 1));
+	if (owner_copy == NULL)
 	{
-		free(d->name);
+		free(name_copy);
 		free(d);
 		return (NULL);
 	}
+	for (i = 0; i <= len; i++)
+		owner_copy[i] = owner[i];
 
+	d->name = name_copy;
 	d->age = age;
+	d->owner = owner_copy;
 
 	return (d);
 }
