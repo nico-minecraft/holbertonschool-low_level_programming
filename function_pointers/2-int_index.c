@@ -1,3 +1,4 @@
+#include <stddef.h>
 /**
  * int_index - Searches for an integer
  * Return: Returns index, if invalid, returns -1
