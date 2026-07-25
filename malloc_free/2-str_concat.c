@@ -1,12 +1,10 @@
 #include <stdlib.h>
-
 /**
 * *str_concat - Concatenates two separate strings
 * Return: Returns a pointer to the concatenated string
 * @s1: String to be concatenated
 * @s2: Concatenate to be strung
 */
-
 char *str_concat(char *s1, char *s2)
 {
 char *result;
